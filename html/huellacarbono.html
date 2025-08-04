@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cuestionario de Huella de Carbono</title>
+    <link rel="stylesheet" href="/css/estilo_co2.css">
+</head>
+
+<body>
+    <div id="cuestionario-carbono">
+        <h1>Cuestionario de Huella de Carbono</h1>
+        <form id="form-carbono">
+
+            <!-- Parte 1 del formulario -->
+            <h2>1. Uso de energía en el hogar</h2>
+            <div class="grid-cuestionario">
+                <div class="tarjeta-pregunta">
+                    <label>¿Con qué frecuencia apagas las luces al salir?</label>
+                    <input type="radio" name="luces" value="0"> Siempre<br>
+                    <input type="radio" name="luces" value="1"> A veces<br>
+                    <input type="radio" name="luces" value="2"> Nunca
+                </div>
+                <div class="tarjeta-pregunta">
+                    <label>¿Qué tipo de energía usas para cocinar?</label>
+                    <select name="cocina">
+                        <option value="0">Gas natural</option>
+                        <option value="1">Gas en cilindro</option>
+                        <option value="2">Eléctrico</option>
+                        <option value="3">Leña</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Parte 2 del formulario -->
+            <h2>2. Transporte</h2>
+            <div class="grid-cuestionario">
+                <div class="tarjeta-pregunta">
+                    <label>¿Cómo te desplazas regularmente?</label>
+                    <select name="transporte">
+                        <option value="0">A pie o bicicleta</option>
+                        <option value="1">Transporte público</option>
+                        <option value="2">Carro propio</option>
+                    </select>
+                </div>
+                <div class="tarjeta-pregunta">
+                    <label>¿Viajas en avión al año?</label>
+                    <select name="avion">
+                        <option value="0">Nunca</option>
+                        <option value="1">1-2 veces</option>
+                        <option value="2">Más de 2 veces</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Parte 3 del formulario -->
+            <h2>3. Alimentación y residuos</h2>
+            <div class="grid-cuestionario">
+                <div class="tarjeta-pregunta">
+                    <label>¿Con qué frecuencia consumes carne roja?</label>
+                    <input type="radio" name="carne" value="2"> Más de 3 veces/semana<br>
+                    <input type="radio" name="carne" value="1"> 1-2 veces/semana<br>
+                    <input type="radio" name="carne" value="0"> Nunca
+                </div>
+                <div class="tarjeta-pregunta">
+                    <label>¿Separas los residuos reciclables?</label>
+                    <input type="radio" name="reciclaje" value="0"> Siempre<br>
+                    <input type="radio" name="reciclaje" value="1"> A veces<br>
+                    <input type="radio" name="reciclaje" value="2"> Nunca
+                </div>
+            </div>
+
+            <!-- Botón de resultado de la huella -->
+            <div class="boton-centro">
+                <button type="submit">Calcular mi huella</button>
+            </div>
+        </form>
+
+        <!-- Resultado del cuestionario -->
+        <div id="resultado"></div>
+    </div>
+
+    <script src="/js/co2_script.js"></script>
+</body>
+
+</html>
