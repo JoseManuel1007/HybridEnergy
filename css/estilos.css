@@ -2,8 +2,10 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   padding-top: 70px;
+  text-align: center;
 }
 
+/* -------- NAVBAR -------- */
 .navbar {
   background-color: #2E7D32;
   position: fixed;
@@ -17,6 +19,11 @@ body {
   font-weight: bold;
   color: #ffffff;
   font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .navbar .navbar-brand span {
@@ -44,6 +51,252 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28166, 206, 57, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+/* -------- CALCULADORA -------- */
+#calculadora {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f1f1f1;
+  color: #333;
+}
 
+#calculadora .container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+#calculadora .container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+#calculadora h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+#calculadora h2:hover {
+  transform: scale(1.05);
+}
+
+#calculadora label,
+#calculadora input {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #34495e;
+}
+
+#calculadora input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#calculadora button {
+  background-color: #27ae60;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#calculadora button:hover {
+  background-color: #219150;
+  transform: scale(1.03);
+}
+
+#calculadora .result {
+  margin-top: 20px;
+  background: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* -------- CONTEXTUALIZACION -------- */
+#contextualizacion {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: #002240;
+}
+
+#contextualizacion .columna-izquierda {
+  flex: 1;
+  position: relative;
+  padding-left: 20px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+#contextualizacion .columna-izquierda:hover {
+  transform: translateY(-5px);
+}
+
+#contextualizacion .columna-izquierda::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, #2fc04f, #ccdf20);
+  border-radius: 4px;
+}
+
+#contextualizacion .columna-derecha {
+  flex: 2;
+}
+
+#contextualizacion h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #001b35;
+  transition: transform 0.3s ease;
+}
+
+#contextualizacion h2:hover {
+  transform: scale(1.03);
+}
+
+#contextualizacion strong {
+  font-weight: 700;
+  color: #001b35;
+}
+
+#contextualizacion a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#contextualizacion a:hover {
+  text-decoration: underline;
+  color: #005f99;
+}
+
+/* -------- BOTONES -------- */
+#botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#botones button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#botones button:hover {
+  background-color: #1e7e34;
+  transform: scale(1.05);
+}
+
+/* -------- GRID DE TARJETAS -------- */
+#grid-1x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: #ecf0f1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #ffffff11;
+  backdrop-filter: blur(3px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* -------- IMÁGENES GENÉRICAS -------- */
+img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+.grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+      grid-template-rows: 1fr 1fr; /* 2 filas */
+      gap: 10px;
+      height: 300px; /* para visualizar mejor */
+      width: 90%;
+      margin: 0 auto; /* centrado horizontal */
+      
+    }
+
+    .item1 {
+      grid-column: 1 / 2;   /* columna 1 */
+      grid-row: 1 / 3;      /* ocupa las dos filas */
+      background-color: #3498db;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item2 {
+      grid-column: 2 / 3;   /* columna 2 */
+      grid-row: 1 / 2;      /* fila superior */
+      background-color: #2ecc71;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item3 {
+      grid-column: 2 / 3;   /* columna 2 */
+      grid-row: 2 / 3;      /* fila inferior */
+      background-color: #000000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
