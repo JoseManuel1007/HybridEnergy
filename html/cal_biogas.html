@@ -2,25 +2,51 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Calculadora Energía y Biogás</title>
-  <link rel="stylesheet" href="/css/estilo_cal.css">
+  <link rel="stylesheet" href="/css/estilo_cal.css" />
 </head>
 
 <body>
-  <div class="container">
-    <h2>Calculadora de Energía y Biogás</h2>
 
-    <label for="personas">Cantidad de personas en el hogar:</label>
-    <input type="number" id="personas" min="1" value="4" width="80%">
+  <!-- Contenedor en grid: calculadora, video y de como funciona la calculadora-->
+  <div class="grid-container">
 
-    <label for="consumo">Consumo eléctrico mensual (kWh):</label>
-    <input type="number" id="consumo" min="0" value="150">
+    <!-- Panel de la calculadora de energia y biogas -->
+    <div class="calculadora">
+      <h2>Calculadora de Energía y Biogás</h2>
 
-    <button onclick="calcular()" style="width: 100%;">Calcular</button>
+      <label for="personas">Cantidad de personas en el hogar:</label>
+      <input type="number" id="personas" min="1" value="4" />
 
-    <div class="result" id="resultado"></div>
+      <label for="consumo">Consumo eléctrico mensual (kWh):</label>
+      <input type="number" id="consumo" min="0" value="150" />
+
+      <button onclick="calcular()">Calcular</button>
+
+      <div class="result" id="resultado"></div>
+    </div>
+
+    <!-- Panel del video de los biocombustibles -->
+    <div class="video">
+      <h2>Los Biocombustible</h2>
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/vmdN27xDSSo?si=XouhJ_TlQRWYtIKg"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Texto explicativo debajo de la calculadora de como funciona esta -->
+  <div class="explicacion">
+    <h3>¿Qué hace esta calculadora?</h3>
+    <p>Esta calculadora estima la cantidad de energía que puedes obtener a partir del biogás producido con los residuos
+      orgánicos del hogar. También compara esa energía con tu consumo eléctrico mensual, indicando cuánto podrías
+      ahorrar.</p>
+    <p>Es una herramienta útil para concientizar el uso de energías renovables y fomentar la sostenibilidad en el hogar.
+    </p>
   </div>
 
   <script src="/js/cal_script.js"></script>
