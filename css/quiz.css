@@ -1,0 +1,21 @@
+.banner-text {
+  background-color: rgba(133, 127, 127, 0.6);
+  padding: 30px 40px;
+  border-radius: 10px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+body {
+  background-color: #f0f8f0;
+}
+
+h1 {
+  color: #2e7d32;
+}
+
+#resultado {
+  font-size: 1.2rem;
+}
