@@ -1,63 +1,42 @@
-/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
   margin: 40px;
   background-color: #f1f1f1;
-  color: #333;
+    color: #333;
 }
 
-/* Contenedor grid */
-.grid-container {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 20px;
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Panel de la calculadora */
-.calculadora {
-  min-height: 460px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-
-/* Panel del video */
-.video {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Títulos */
 h2 {
   color: #2c3e50;
   text-align: center;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
-/* Etiquetas e inputs */
 label, input {
   display: block;
   margin-bottom: 15px;
-  font-size: 16px;
-  color: #34495e;
+    font-size: 16px;
+    color: #34495e;
+
 }
 
 input[type="number"] {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-/* Botón */
 button {
   background-color: #27ae60;
   color: white;
@@ -67,38 +46,18 @@ button {
   cursor: pointer;
   width: 100%;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #219150;
 }
 
-/* Resultado */
 .result {
   margin-top: 20px;
   background: #ecf0f1;
   padding: 15px;
   border-radius: 5px;
-  font-size: 16px;
-  color: #2c3e50;
-  max-height: 180px;
-  overflow-y: auto;
-}
-
-/* Texto explicativo */
-.explicacion {
-  max-width: 800px;
-  margin: 30px auto;
-  background-color: #eef2f3;
-  padding: 20px;
-  border-radius: 10px;
-  line-height: 1.6;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
+    font-size: 16px;
+    color: #2c3e50;
 }
