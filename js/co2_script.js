@@ -12,7 +12,7 @@ document.getElementById('form-carbono').addEventListener('submit', function(e) {
 
   total = luces + cocina + transporte + avion + carne + reciclaje;
 
-  const resultado = document.getElementById('resultado');
+  const resultado = document.getElementById('resultado1');
   resultado.style.display = 'block';
 
   if (total <= 4) {
@@ -23,3 +23,28 @@ document.getElementById('form-carbono').addEventListener('submit', function(e) {
     resultado.innerHTML = "🔥 <strong>Huella alta:</strong> Tu estilo de vida genera un alto impacto ambiental. ¡Revisa tus hábitos y actúa!";
   }
 });
+
+function calificar() {
+  const respuestas = {
+    q1: "B",
+    q2: "C",
+    q3: "C",
+    q4: "C",
+    q5: "F",
+    q6: "V",
+    q7: "F",
+    q8: "V"
+  };
+
+  let correctas = 0;
+
+  for (let key in respuestas) {
+    const seleccionada = document.querySelector(`input[name="${key}"]:checked`);
+    if (seleccionada && seleccionada.value === respuestas[key]) {
+      correctas++;
+    }
+  }
+
+  document.getElementById("resultado").innerHTML =
+    `Tuviste ${correctas} de 8 respuestas correctas.`;
+}

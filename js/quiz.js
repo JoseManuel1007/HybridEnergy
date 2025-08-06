@@ -19,6 +19,6 @@ function calificar() {
     }
   }
 
-  document.getElementById("resultado").innerHTML =
-    `Tuviste ${correctas} de 8 respuestas correctas.`;
+  const resultado = document.getElementById("resultadoquiz");
+  resultado.innerHTML = `Tuviste ${correctas} de 8 respuestas correctas.`;
 }
