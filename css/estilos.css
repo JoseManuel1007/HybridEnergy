@@ -563,5 +563,5 @@ button:hover {
     background-color: #e8f5e9;
     border-left: 6px solid #204c37;
     font-size: 18px;
-    display: none;
+    display: flex ;
 }
